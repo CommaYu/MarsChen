@@ -1,1 +1,1 @@
-include ':app', ':appwidget', ':appwidgettestbutton'
+include ':app', ':appwidget', ':appwidgettestbutton', ':appwidgetgetbroadcast', ':appwidgetforuse'

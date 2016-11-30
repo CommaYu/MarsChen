@@ -1,0 +1,5 @@
+<!--如果我们的button没有显示出来，可以修改android：minWidth-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/example_appwidget"
+    android:minHeight="200dp"
+    android:minWidth="294dp"></appwidget-provider>

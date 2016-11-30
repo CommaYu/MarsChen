@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:id="@+id/linearLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
@@ -11,9 +12,16 @@
         android:background="#000000"
         android:text="firstWidgetText" />
 
+    <ImageView
+        android:id="@+id/imageId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/xiao" />
+
+    <!--如果我们的button没有显示出来，可以修改android：minWidth-->
     <Button
         android:id="@+id/widgetButtonId"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="appWidget测试button页面跳转" />
+        android:text="测试用按钮" />
 </LinearLayout>

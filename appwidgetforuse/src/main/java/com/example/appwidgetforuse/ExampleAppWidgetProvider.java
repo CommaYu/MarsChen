@@ -43,7 +43,7 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
             ComponentName componentName = new ComponentName(context, ExampleAppWidgetProvider.class);
             appWidgetManager.updateAppWidget(componentName, remoteViews);
-        } else {
+        } else {    //注意此处else的运用，如果我们的action满足我们的要求，就用我们的，如果不是则用父类的。注意先后顺序关系
             super.onReceive(context, intent);
         }
     }
@@ -51,6 +51,7 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager,
                          int[] appWidgetIds) {
+        super.onUpdate(context, appWidgetManager, appWidgetIds);
         Intent intent = new Intent();
         intent.setAction(UPDATE_ACTION);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, -1,
